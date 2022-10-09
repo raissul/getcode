@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile | Raissul Ialam Sajieeb</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card front-face">
+        <img src="https://images.unsplash.com/photo-1665203001414-7ddd407c7d82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60">
+      </div>
+      <div class="card back-face">
+        <img src="img2.jpg">
+        <div class="info">
+       <div class="title">Raissul Islam Sajieeb</div>
+          <p><textarea id="original">
+          ### AUTOFILL PROFILES ###,,,,,,&#13;&#10;Profile ID,Name,Site,Hotkey,,,&#13;&#10;### AUTOFILL RULES ###,,,,,,&#13;&#10;Rule ID,Type,Name,Value,Site,Mode,Profile&#13;&#10;r9,0,"div.col-md-5.col-sm-5.main-section:nth-of-type(2) > form:first-child > div:first-child > input.form-control[type=""text""]:last-child","building name","mapping-ui.chaldal.com/BuildingInfoAddEditComponent",0,&#13;&#10;r10,0,"div.col-md-5.col-sm-5.main-section:nth-of-type(2) > form:first-child > div:nth-child(2) > input.form-control[type=""text""]:last-child","House No:*","mapping-ui.chaldal.com/BuildingInfoAddEditComponent",0,&#13;&#10;r11,0,"div:nth-of-type(3) > input.form-control[type=""text""]:last-child","Sub Area","mapping-ui.chaldal.com/BuildingInfoAddEditComponent",0,&#13;&#10;r12,0,"div.col-md-5.col-sm-5.main-section:nth-of-type(3) > form:first-child > div:first-child > input.form-control[type=""text""]:last-child","Building Name Bangla","mapping-ui.chaldal.com/BuildingInfoAddEditComponent",0,&#13;&#10;r13,0,"div.col-md-5.col-sm-5.main-section:nth-of-type(3) > form:first-child > div:nth-child(2) > input.form-control[type=""text""]:last-child","Road:","mapping-ui.chaldal.com/BuildingInfoAddEditComponent",0,&#13;&#10;r15,3,"^radioGroup3$","1","mapping-ui.chaldal.com/BuildingInfoAddEditComponent",0,&#13;&#10;r14,3,"^radioGroup$","1000","mapping-ui.chaldal.com/BuildingInfoAddEditComponent",0,&#13;&#10;r16,3,"^radioGroupMaximumAccessibility$","01","mapping-ui.chaldal.com/BuildingInfoAddEditComponent",0,&#13;&#10;### AUTOFILL OPTIONS ###,,,,,,&#13;&#10;advanced,"[]",,,,,&#13;&#10;exceptions,"[]",,,,,&#13;&#10;textclips,"[]",,,,,&#13;&#10;variables,"[]",,,,,&#13;&#10;backup,0,30,,,,&#13;&#10;manual,0,,,,,&#13;&#10;delay,0,1,,,,&#13;&#10;labelmatch,0,,,,,&#13;&#10;overwrite,0,,,,,&#13;&#10;vars,1,,,,,&#13;&#10;sound,0,,,,,&#13;&#10;voice,0,1,,,,&#13;&#10;debug,0,,,,,&#13;&#10;mask,1,,,,,&#13;&#10;scale,1,,,,,&#13;&#10;menu,1,,,,,&#13;&#10;autoimport,0,,,,,</textarea>
+           </p>
+          
+        </div>   
+          <button class="btn">Get Code</button>
+
+               <div class="name"> <h2>Raissul</h2>
+          <p>Student Of CSE<br> MAIT Jashore</p>   </div>     
+        </div>
+
+      </div>
+
+      
+    </div>
+
+
+
+    <script>
+      
+      document.querySelector(".btn").addEventListener("click", copy);
+       function copy() {
+           let fake = document.createElement("textarea");
+           fake.value = document.querySelector("#original").value;
+           //fake.value = "1\n2\n3";
+           document.body.appendChild(fake);
+           fake.select();
+           document.execCommand("copy");
+           document.body.removeChild(fake);
+           let notice = document.createElement("span");
+           notice.className = "notice visible";
+           notice.innerHTML = "Text copied to the clipboard!";
+           document.body.appendChild(notice);
+           setTimeout(() => {
+               document.body.removeChild(notice);
+           }, 3000);
+       }
+
+
+       document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+    return false;
+};
+       </script>
+
+
+  </body>
+</html>
